@@ -1,4 +1,4 @@
-// From Guided Project
+// Import
 
 import axios from 'axios';
 
@@ -6,11 +6,13 @@ import axios from 'axios';
 // - baseURL
 // - headers object -> authorization header with the token
 
+// Axios Auth
+
 export const axiosWithAuth = () => {
   const token = localStorage.getItem('token');
 
   return axios.create({
-    baseURL: 'http://localhost:5000/api/friends',
+    baseURL: 'http://localhost:5000/api',
     headers: {
       Authorization: token
     }
